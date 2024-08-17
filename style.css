@@ -1,0 +1,315 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #1b1a1a;
+}
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #1b1a1a;
+}
+#gameOverText{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1b1a1a;
+    position: absolute;
+    z-index: 10;
+    gap: 16px;
+}
+#gameOverText h1{
+    width: 100%;
+    text-align: center;
+    color: bisque;
+    font-size: 40px;
+    animation: show .7s linear forwards;
+}
+p{
+    font-size: 14px;
+}
+
+.aboutGame {
+    display: none;
+    background-color: rgb(49, 47, 47);
+    padding: 25px;
+    margin: auto;
+    color: aliceblue;
+    width: 350px;
+    height: 350px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border: 2px solid gray;
+    border-radius: 24px;
+    position: relative;
+}
+
+#cancleDiv {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+#cancleBtn {
+    font-size: 18px;
+}
+
+#gameInfo {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    z-index: 888888;
+}
+
+#aboutBtn,
+#startBtn {
+    width: 120px;
+    height: 50px;
+    font-size: 17px;
+    border: 2px solid rgb(107, 106, 103);
+    border-radius: 15px;
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+#platform {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #424141;
+    overflow: hidden;
+}
+
+.createdBall {
+    width: 50px;
+    height: 50px;
+    background-color: beige;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
+.createdBall::before{
+    content: '';
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    /* background-color: aqua; */
+}
+.bomb{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
+.bomb::after{
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    /* background-color: aquamarine; */
+}
+
+@keyframes fallDown {
+    to {
+        transform: translateY(100vh);
+    }
+}
+@keyframes show{
+    0%{
+        transform: scale(0.8);
+    }20%{ 
+        transform: scale(1.2);
+    }40%{ 
+        transform: scale(1.5);
+    }60%{
+        transform: scale(1.2);
+    }80%{    
+        transform: scale(0.8);
+    }100%{   
+        transform: scale(1);
+    }
+}
+
+#point_heart {
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 99999999999999999999;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #1b1a1a;
+    top: 0;
+    left: 0;
+
+    h1{
+        color: white;
+    }
+}
+.points_hearts_box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.addheart{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#points {
+    width: 120px;
+    color: antiquewhite;
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#heart {
+    width: 160px;
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 25px;
+    color: rgb(231, 131, 131);
+    border: 2px solid wheat;
+    border-radius: 20px;
+}
+#startAgainBtn{
+    width: 120px;
+    height: 60px;
+    border: 2px solid gray;
+    border-radius: 20px;
+}
+#name {
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes bombFall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.createdBomb {
+    position: absolute;
+    font-size: 40px;
+    color: rgb(231, 131, 131);
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+}
+#plusHeart{
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border: 2px solid wheat;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#plusHeartBtn{
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    color: rgb(61, 59, 57);
+}
+
+@media(max-width:768px){
+    @keyframes show{
+        0%{
+            transform: scale(0.8);
+        }20%{ 
+            transform: scale(1.1);
+        }40%{ 
+            transform: scale(0.8);
+        }60%{
+            transform: scale(1.1);
+        }80%{    
+            transform: scale(0.8);
+        }100%{   
+            transform: scale(1);
+        }
+    }
+}
+
+@keyframes backgroundShake{
+    0%{
+        background-color: rgb(236, 84, 84);
+    }20%{
+        background-color: #424141;
+    }40%{
+        background-color: rgb(236, 84, 84);
+    }60%{
+        background-color: #424141;
+    }80%{
+        background-color: rgb(236, 84, 84);
+    }100%{
+        background-color: #424141;
+    }
+}
+@keyframes showGreen{
+    0%{
+        background-color: rgb(152, 236, 126);
+    }20%{
+        background-color: #424141;
+    }40%{
+        background-color: rgb(152, 236, 126);
+    }60%{
+        background-color: #424141;
+    }80%{
+        background-color: rgb(152, 236, 126);
+    }100%{
+        background-color: #424141;
+    }
+}

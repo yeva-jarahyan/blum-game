@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="container">
+        <div class="aboutGame">
+            <div id="cancleDiv"><button id="cancleBtn"><i class="fa-regular fa-circle-xmark"></i></button></div>
+            <div>
+                <h2>THIS GAME IS CALLED BLUM</h2>
+            </div>
+            <div>
+                <p>this is game wich is called BLUM. During this game you have to do mouseover on the following balls
+                    and
+                    make points(if your playing on compyuter).in phone it's the same but you have to click them.if you
+                    click
+                    BOMB you lose one of lives.in the end when you have no lives you lose the game</p>
+            </div>
+
+        </div>
+        <div id="gameInfo">
+            <div id="about"><button id="aboutBtn">ABOUT GAME</button></div>
+            <div id="start"><button onclick="Start()" id="startBtn">START GAME</button></div>
+        </div>
+        <div id="platform"></div>
+        <div id="point_heart">
+            <h1>BLUM GAME</h1>
+
+            <div class="points_hearts_box">
+                <div id="points"></div>
+                <div class="addheart">
+                    <div id="plusHeart"><button id="plusHeartBtn">+</button></div>
+                    <div id="heart">
+                        <span> <i class="fa-solid fa-heart"></i></span>
+                        <span><i class="fa-solid fa-heart"></i></span>
+                        <span><i class="fa-solid fa-heart"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gameOverText">
+        <h1>GAME IS OVER</h1>
+        <h1 id="pointsCountHtml"></h1>
+        <button id="startAgainBtn">START AGAIN</button>
+    </div>
+    <script src="./FinalJs.js"></script>
+</body>
+
+</html>
